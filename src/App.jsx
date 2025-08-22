@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 
 // --- MOCK DATA & HELPERS ---
 // In a real app, this would come from a backend/API connected to Google Sheets
-const MOCK_ADMIN_CREDS = { email: 'meeladmehfil@2025.com', password: 'meeladmehfil' };
+const MOCK_ADMIN_CREDS = { email: 'admin@example.com', password: 'password' };
 const GOOGLE_SHEET_QUIZ_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDauFHl4Oddzupn2bC0PbayXrncq4R0zHP6JGxBzGSzx-Wn6ZW4OP-VBBe-NBF-n7K10Me64ydi5C3/pub?output=csv';
 const GOOGLE_SHEET_DEMO_QUIZ_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4DzVrw2siEz6YQvb4bkfpmRIRbKcYQzsNyItErh0jdb5rdSAAMt7Tv0adk9o3SswspvlkMC9BTs4J/pub?output=csv';
 const GOOGLE_SHEET_USERS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjS7naJ57vdLOHdSvUpUXNyotANcl9b4jHE5SUolPLPLjvSBPzjaq6gph605JGKjGI51OzR4OO7ywq/pub?output=csv';
@@ -329,7 +329,7 @@ const UserDashboard = ({ user, onLogout, onNavigate }) => {
         {/* Special Quiz Card */}
         <div
           onClick={() => (!hasAttemptedQuiz && isQuizEnabled) && onNavigate('quiz', 'main')}
-          className={`rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 border-b-4 ${(!isQuizEnabled || hasAttemptedQuiz) ? 'opacity-60 cursor-not-allowed bg-gray-300 border-gray-400' : 'cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-[#b8c400] to-[#041800] text-white border-yellow-600'}`}
+          className={`rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 border-b-4 ${(!isQuizEnabled || hasAttemptedQuiz) ? 'opacity-60 cursor-not-allowed bg-gray-300 border-gray-400' : 'cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-lime-400 to-green-900 text-white border-lime-600'}`}
         >
           <h3 className="text-xl font-bold font-malayalam">
             മെഗാ ക്വിസ്
@@ -341,7 +341,7 @@ const UserDashboard = ({ user, onLogout, onNavigate }) => {
         {/* Demo Quiz Card */}
         <div
           onClick={() => onNavigate('quiz', 'demo')}
-          className="rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-[#b8c400] to-[#041800] text-white border-b-4 border-yellow-600"
+          className="rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-lime-400 to-green-900 text-white border-b-4 border-lime-600"
         >
           <h3 className="text-xl font-bold">
             Demo Quiz
@@ -354,7 +354,7 @@ const UserDashboard = ({ user, onLogout, onNavigate }) => {
         {isGoogleFormEnabled && googleFormUrl && (
             <div
               onClick={() => window.open(googleFormUrl, '_blank')}
-              className="rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-[#b8c400] to-[#041800] text-white border-b-4 border-yellow-600"
+              className="rounded-2xl shadow-lg p-6 text-center transform transition-transform duration-300 cursor-pointer hover:-translate-y-1 bg-gradient-to-br from-lime-400 to-green-900 text-white border-b-4 border-lime-600"
             >
               <h3 className="text-xl font-bold">
                 External Quiz
